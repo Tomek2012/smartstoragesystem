@@ -1,6 +1,13 @@
+"use client";
+
 import { ROProduct } from "@/app/types/ROProduct";
+import { updateCompartment } from "./actions";
 
 export default function Compartment(product: ROProduct) {
+  const updateCompartmentWithProductinformation = updateCompartment.bind(
+    null,
+    product
+  );
   return (
     <div className="shadow-md rounded-2xl p-4 w-full max-w-3xs">
       <div className="flex grid grid-cols-2">
@@ -16,19 +23,22 @@ export default function Compartment(product: ROProduct) {
           </div>
         ))}
       </div>
-      <div className="flex mt-5 gap-2 justify-end">
-        <form className="max-w-15">
+      <form action={updateCompartmentWithProductinformation}>
+        <div className="flex mt-5 gap-2 justify-end">
           <input
             type="number"
-            id="number-input"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+            name="wdnumber"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 max-w-15"
             required
           />
-        </form>
-        <button className="bg-sky-600 text-white px-2 rounded-lg hover:bg-blue-600">
-          Go
-        </button>
-      </div>
+          <button
+            className="bg-sky-600 text-white px-2 rounded-lg hover:bg-blue-600"
+            type="submit"
+          >
+            Go
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
