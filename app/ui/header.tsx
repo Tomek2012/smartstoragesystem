@@ -20,27 +20,6 @@ export default function Header() {
           Settings
         </Link>
       </nav>
-      {/* <nav className="sm:hidden flex flex-col items-end gap-1 font-semibold">
-        <button
-          onClick={() => setShowMenu(!showMenu)}
-          className="sm:hidden font-bold text-xl hover:text-gray-500"
-        >
-          {showMenu ? <GrClose /> : <GiHamburgerMenu />}
-        </button>
-        {showMenu && (
-          <>
-            <a href="#" className="hover:text-gray-500">
-              Home
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              About
-            </a>
-            <a href="#" className="hover:text-gray-500">
-              Contact
-            </a>
-          </>
-        )}
-      </nav> */}
     </header>
   );
 }

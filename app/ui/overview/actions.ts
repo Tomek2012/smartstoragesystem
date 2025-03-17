@@ -15,8 +15,6 @@ export async function updateCompartment(
     quantity: productInformation.quantity - wdnumber,
   };
 
-  console.log("JsonOutput", JSON.stringify(newCompartment));
-
   const response = await fetch(
     "http://localhost:3000/overview/api/compartments/" +
       String(productInformation.id),
@@ -25,6 +23,6 @@ export async function updateCompartment(
       body: JSON.stringify(newCompartment),
     }
   ).then((res) => res.json());
-  console.log("Response from API", response);
+
   revalidatePath("/overview");
 }
