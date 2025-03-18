@@ -9,13 +9,13 @@ export default function Compartment(product: ROProduct) {
     product
   );
   return (
-    <div className="shadow-md rounded-2xl p-4 w-full max-w-3xs">
+    <div className="shadow-md rounded-2xl p-4 w-full max-w-3xs m-3">
       <div className="flex grid grid-cols-2">
         <h3 className="font-semibold">{product.productName}</h3>
         <p className="justify-self-end">Qty: {product.quantity}</p>
       </div>
-      <div className="grid grid-cols-3 gap-1 mt-3 place-items-center">
-        {[...Array(9)].map((_, index) => (
+      <div className="grid grid-cols-3 gap-1 mt-3 place-items-center overflow-y-auto min-h-20 max-h-20">
+        {[...Array(product.quantity)].map((_, index) => (
           <div key={index} className={`w-6 h-6 rounded-sm bg-sky-600`}>
             <p className="text-center text-white">{index + 1}</p>
           </div>

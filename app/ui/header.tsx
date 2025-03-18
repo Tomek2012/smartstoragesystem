@@ -3,16 +3,17 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex flex-row items-center justify-between sm:justify-around p-2 border-b-2 border-sky-600 bg-white">
+    <header className="grid grid-cols-2 items-center p-2 border-b-2 border-sky-600 bg-white w-full">
       <Link href="/">
         <Image
+          className="ml-10"
           src={"/assets/images/komet-logo-light.png"}
           width={200}
           height={100}
           alt="Logo of Komet Dental"
         />
       </Link>
-      <nav className="hidden sm:flex gap-10 font-semibold text-gray-600">
+      <nav className="hidden sm:flex gap-10 font-semibold text-gray-600 justify-end mr-10">
         <Link href="/overview" className="hover:text-gray-500">
           Overview
         </Link>
