@@ -1,6 +1,5 @@
 import { compartmentData } from "@/app/lib/compartment-data.";
 import { ROProduct } from "@/app/types/ROProduct";
-import { redirect } from "next/navigation";
 
 export async function PUT(
   request: Request,
@@ -15,7 +14,6 @@ export async function PUT(
   );
 
   compartmentData[compartmentIndex] = compartment;
-
 
   return Response.json(compartmentData[compartmentIndex], { status: 200 });
 }
