@@ -14,7 +14,7 @@ export default function Compartment(product: ROProduct) {
         <h3 className="font-semibold">{product.productName}</h3>
         <p className="justify-self-end">Qty: {product.quantity}</p>
       </div>
-      <div className="grid grid-cols-3 gap-1 mt-3 place-items-center overflow-y-auto min-h-20 max-h-20">
+      <div className="grid grid-cols-3 gap-1 mt-3 place-items-center overflow-y-auto min-h-20 max-h-20 auto-rows-max">
         {[...Array(product.quantity)].map((_, index) => (
           <div key={index} className={`w-6 h-6 rounded-sm bg-sky-600`}>
             <p className="text-center text-white">{index + 1}</p>
