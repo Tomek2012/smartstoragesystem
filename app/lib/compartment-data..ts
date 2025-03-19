@@ -1,5 +1,6 @@
 import { ROProduct } from "../types/ROProduct";
 
+/* Testdata (in-memory) */
 export const compartmentData: ROProduct[] = [
   { id: 0, productName: "Toothpaste", quantity: 10 },
   { id: 1, productName: "Toothbrush", quantity: 15 },

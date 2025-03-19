@@ -1,4 +1,5 @@
 export default function Page() {
+  /* Settings-Page (does not have specific functions) */
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tight p-4">

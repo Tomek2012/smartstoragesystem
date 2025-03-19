@@ -3,6 +3,7 @@
 import { ROProduct } from "@/app/types/ROProduct";
 import { updateCompartment } from "./actions";
 
+/* Compartment-Component: show name, all availabe products and acutal quantity in a card */
 export default function Compartment(product: ROProduct) {
   const updateCompartmentWithProductinformation = updateCompartment.bind(
     null,
@@ -17,12 +18,14 @@ export default function Compartment(product: ROProduct) {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-1 mt-3 place-items-center overflow-y-auto min-h-20 max-h-20 auto-rows-max">
+        {/* Create box for every availabe product */}
         {[...Array(product.quantity)].map((_, index) => (
           <div key={index} className={`w-6 h-6 rounded-sm bg-sky-600`}>
             <p className="text-center text-white">{index + 1}</p>
           </div>
         ))}
       </div>
+      {/* Define form to handle state and to call the save-method (API) */}
       <form action={updateCompartmentWithProductinformation}>
         <div className="flex mt-5 gap-2 justify-end">
           <input

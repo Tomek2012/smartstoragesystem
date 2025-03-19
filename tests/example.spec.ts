@@ -12,7 +12,7 @@ test("has title", async ({ page }) => {
   /* Go to Overview-Page */
   await page.goto("http://localhost:3000/overview");
 
-  /* Check specific compartment-component */
+  /* Check data of specific compartment-component */
   await expect(page.getByText("Toothpaste")).toBeVisible();
 
   await page.getByTestId("input-0").fill("1");

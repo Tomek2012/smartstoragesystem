@@ -1,6 +1,8 @@
 import { compartmentData } from "@/app/lib/compartment-data.";
 import { ROProduct } from "@/app/types/ROProduct";
 
+
+/* Define PUT endpoint to save the updatet compartment data (in-memory) */
 export async function PUT(
   request: Request,
   { params }: { params: { id: string } }

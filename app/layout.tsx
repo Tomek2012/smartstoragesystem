@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/* Define RootLayout with a header, which is applied across all child components */
 export default function RootLayout({
   children,
 }: Readonly<{

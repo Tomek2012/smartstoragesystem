@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/* Header with logo and two navigation-items (overview- and settings-page) */
 export default function Header() {
   return (
     <header className="grid grid-cols-2 items-center p-2 border-b-2 border-sky-600 bg-white w-full">
