@@ -1,7 +1,7 @@
 import { ROProduct } from "@/app/types/ROProduct";
 import { expect, test } from "@playwright/test";
 
-test("has title", async ({ page }) => {
+test("it validates the displayed data after withdrawal", async ({ page }) => {
   /* Get Testdata to validate changes */
   const response = await page.request.get(
     "http://localhost:3000/overview/api/compartments"
